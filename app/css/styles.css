@@ -1,0 +1,225 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 10px; }
+
+ul,
+li {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+@font-face {
+  font-family: "Freight-BigBook";
+  src: url("../fonts/Freight Big Book.otf"); }
+
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url("../fonts/poppins/Poppins-SemiBold.otf"); }
+
+@font-face {
+  font-family: "Cardo";
+  src: url("../fonts/cardo/Cardo-Regular.ttf"); }
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.ttf?8i68t8") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+body {
+  font-family: "Cardo";
+  color: #b0b0b0;
+  font-size: 1.8rem;
+  line-height: 30px;
+  background-color: #04060b; }
+
+.container {
+  width: 1410px;
+  margin: auto; }
+
+header .navbar {
+  padding: 80px 0 0; }
+  header .navbar__brand {
+    display: block; }
+    header .navbar__brand h1 {
+      font-size: 6.4rem;
+      color: #e0e0e0;
+      font-family: "Freight-BigBook";
+      text-align: center; }
+
+header .intro {
+  width: 1050px;
+  font-family: "Freight-BigBook";
+  font-size: 9.5rem;
+  color: #e0e0e0;
+  line-height: 1.16;
+  margin: 315px auto 0; }
+
+main .section-flex {
+  display: flex;
+  justify-content: space-between; }
+
+main .section-illus {
+  height: 1px;
+  background-image: linear-gradient(to right, #111112, #35373a, #111112); }
+
+main .section-heading {
+  font-family: "Freight-BigBook";
+  font-size: 9.5rem;
+  line-height: 1.16;
+  color: #e0e0e0;
+  text-align: center;
+  margin-top: 115px; }
+
+main .about {
+  margin-top: 235px; }
+  main .about .container .container-abt {
+    padding: 0 240px 110px 240px;
+    position: relative; }
+    main .about .container .container-abt:after {
+      content: '';
+      position: absolute;
+      background-image: linear-gradient(to bottom, #111112 0, #35373a 100%);
+      margin-top: 0;
+      height: 100%;
+      width: 1px;
+      top: 0;
+      left: 50%; }
+  main .about__illus {
+    width: 160px;
+    height: 160px;
+    border-radius: 80px;
+    background-color: #5a5a5a;
+    margin: auto; }
+  main .about__header {
+    font-size: 2rem;
+    font-family: "Poppins-SemiBold";
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: 3px;
+    color: #68513d;
+    text-transform: uppercase;
+    margin: 100px 0 20px; }
+  main .about__para {
+    width: 50%;
+    padding: 0 80px 0 0;
+    position: relative; }
+  main .about__block {
+    width: 50%;
+    padding: 0 0 0 80px; }
+  main .about__text {
+    letter-spacing: 0.5px;
+    font-family: "Freight-BigBook";
+    font-size: 2.2rem; }
+    main .about__text span {
+      font-family: "Poppins-SemiBold";
+      font-size: 1.2rem;
+      font-weight: 600;
+      line-height: 2.08;
+      letter-spacing: 1.7px;
+      color: #606060;
+      text-transform: uppercase; }
+
+main .exp table {
+  padding: 140px 0 170px 0; }
+  main .exp table tr {
+    padding-bottom: 90px;
+    display: block; }
+    main .exp table tr:last-child {
+      padding-bottom: 0; }
+  main .exp table th {
+    width: 125px;
+    line-height: 1.25;
+    letter-spacing: 3px;
+    color: #68513d; }
+  main .exp table td {
+    width: 575px;
+    padding: 0 115px; }
+    main .exp table td.title {
+      font-family: "Freight-BigBook";
+      font-size: 5rem;
+      text-transform: capitalize;
+      line-height: 1.2;
+      color: #e0e0e0; }
+    main .exp table td.content ul {
+      font-family: "Poppins-SemiBold";
+      font-size: 1.2rem;
+      font-weight: 600;
+      line-height: 2.08;
+      letter-spacing: 1.7px;
+      color: #68513d;
+      margin-top: 20px;
+      text-decoration: underline; }
+
+main .skills .list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 60px -2px 0 -2px; }
+  main .skills .list .item {
+    width: calc(25% - 4px);
+    background: #131313;
+    text-align: center;
+    padding: 80px 115px 68px 115px;
+    transition: all 0.2s;
+    margin: 2px; }
+    main .skills .list .item:nth-child(12n+1) {
+      background: #04060b; }
+    main .skills .list .item:nth-child(12n+4), main .skills .list .item:nth-child(12n+5), main .skills .list .item:nth-child(12n+9), main .skills .list .item:nth-child(12n+10), main .skills .list .item:nth-child(12n+12) {
+      background: #04060b; }
+      main .skills .list .item:nth-child(12n+4):hover, main .skills .list .item:nth-child(12n+5):hover, main .skills .list .item:nth-child(12n+9):hover, main .skills .list .item:nth-child(12n+10):hover, main .skills .list .item:nth-child(12n+12):hover {
+        background: #04060b; }
+    main .skills .list .item:hover {
+      background: #68513d; }
+      main .skills .list .item:hover p,
+      main .skills .list .item:hover .title,
+      main .skills .list .item:hover .icon-language:before {
+        color: #e0e0e0; }
+      main .skills .list .item:hover .icon-illus {
+        border-color: #e0e0e0; }
+    main .skills .list .item .icon-illus {
+      width: 6.5rem;
+      height: 6.5rem;
+      border: 0.2rem solid #68513d;
+      border-radius: 2rem;
+      margin: auto; }
+    main .skills .list .item .icon-language {
+      display: block;
+      font-size: 4rem;
+      padding: 10px;
+      /* use !important to prevent issues with browser extensions that change fonts */
+      font-family: 'icomoon' !important;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+      main .skills .list .item .icon-language:before {
+        content: "\e901";
+        color: #68513d; }
+    main .skills .list .item p {
+      font-family: "Freight-BigBook";
+      font-size: 9.5rem;
+      line-height: 1.16;
+      color: #e0e0e0;
+      text-transform: uppercase; }
+    main .skills .list .item .title {
+      font-family: "Poppins-SemiBold";
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 2.08;
+      letter-spacing: 1.7px;
+      color: #606060; }
+
+main .works .grid-item {
+  width: auto; }
+  main .works .grid-item img {
+    display: block; }

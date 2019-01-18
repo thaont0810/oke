@@ -39,11 +39,11 @@ body {
   background-color: #04060b; }
 
 .container {
-  width: 1410px;
+  width: 141rem;
   margin: auto; }
 
 header .navbar {
-  padding: 80px 0 0; }
+  padding: 8rem 0 0; }
   header .navbar__brand {
     display: block; }
     header .navbar__brand h1 {
@@ -53,33 +53,83 @@ header .navbar {
       text-align: center; }
 
 header .intro {
-  width: 1050px;
+  width: 105rem;
   font-family: "Freight-BigBook";
   font-size: 9.5rem;
   color: #e0e0e0;
   line-height: 1.16;
-  margin: 315px auto 0; }
+  margin: 31.5rem auto 0; }
 
-main .section-flex {
+header .scroll {
+  position: relative; }
+  header .scroll .scroll-down {
+    margin-top: 12rem;
+    position: absolute;
+    left: 50%;
+    margin-left: -23px; }
+  header .scroll.bounce {
+    -moz-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite; }
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0); }
+  40% {
+    transform: translateY(-30px); }
+  60% {
+    transform: translateY(-15px); } }
+  header .scroll .arrow {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    transform: rotate(-45deg); }
+    header .scroll .arrow.is-big {
+      position: absolute;
+      top: 10px; }
+    header .scroll .arrow:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      border-left: 1px solid;
+      height: 44px;
+      border-image: linear-gradient(to bottom, #000000, #5a5a5a) 1 100%; }
+    header .scroll .arrow:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      border-bottom: 1px solid;
+      width: 44px;
+      border-image: linear-gradient(to left, #000000, #5a5a5a) 100% 1; }
+
+.section-flex {
   display: flex;
   justify-content: space-between; }
 
-main .section-illus {
-  height: 1px;
+.section-illus {
+  height: 0.1rem;
   background-image: linear-gradient(to right, #111112, #35373a, #111112); }
 
-main .section-heading {
+.section-heading {
   font-family: "Freight-BigBook";
   font-size: 9.5rem;
+  font-weight: normal;
   line-height: 1.16;
   color: #e0e0e0;
   text-align: center;
   margin-top: 115px; }
 
-main .about {
-  margin-top: 235px; }
+main {
+  margin-top: 16.6rem;
+  padding-top: 7rem; }
   main .about .container .container-abt {
-    padding: 0 240px 110px 240px;
+    padding: 0 24rem 11rem 24rem;
     position: relative; }
     main .about .container .container-abt:after {
       content: '';
@@ -91,9 +141,9 @@ main .about {
       top: 0;
       left: 50%; }
   main .about__illus {
-    width: 160px;
-    height: 160px;
-    border-radius: 80px;
+    width: 16rem;
+    height: 16rem;
+    border-radius: 8rem;
     background-color: #5a5a5a;
     margin: auto; }
   main .about__header {
@@ -104,14 +154,14 @@ main .about {
     letter-spacing: 3px;
     color: #68513d;
     text-transform: uppercase;
-    margin: 100px 0 20px; }
+    margin: 10rem 0 2rem; }
   main .about__para {
     width: 50%;
-    padding: 0 80px 0 0;
+    padding: 0 8rem 0 0;
     position: relative; }
   main .about__block {
     width: 50%;
-    padding: 0 0 0 80px; }
+    padding: 0 0 0 8rem; }
   main .about__text {
     letter-spacing: 0.5px;
     font-family: "Freight-BigBook";
@@ -124,102 +174,180 @@ main .about {
       letter-spacing: 1.7px;
       color: #606060;
       text-transform: uppercase; }
+  main .exp table {
+    padding: 14rem 0 17rem 0; }
+    main .exp table tr {
+      padding-bottom: 9rem;
+      display: block; }
+      main .exp table tr:last-child {
+        padding-bottom: 0; }
+    main .exp table th {
+      width: 12.5rem;
+      line-height: 1.25;
+      letter-spacing: 3px;
+      color: #68513d;
+      font-family: "Poppins-SemiBold"; }
+    main .exp table td {
+      width: 57.5rem;
+      padding: 0 11.5rem; }
+      main .exp table td.title {
+        font-family: "Freight-BigBook";
+        font-size: 5rem;
+        text-transform: capitalize;
+        line-height: 1.2;
+        color: #e0e0e0; }
+      main .exp table td.content ul a {
+        font-family: "Poppins-SemiBold";
+        font-size: 1.2rem;
+        font-weight: 600;
+        line-height: 2.08;
+        letter-spacing: 1.7px;
+        color: #68513d;
+        margin-top: 2rem;
+        text-decoration: underline; }
+  main .skills .list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 6rem -0.2rem 0 -0.2rem; }
+    main .skills .list .item {
+      width: calc(25% - 4px);
+      background: #131313;
+      text-align: center;
+      padding: 80px 115px 68px 115px;
+      transition: all 0.2s;
+      margin: 2px; }
+      main .skills .list .item:nth-child(12n+1) {
+        background: #04060b; }
+      main .skills .list .item:nth-child(12n+4), main .skills .list .item:nth-child(12n+5), main .skills .list .item:nth-child(12n+9), main .skills .list .item:nth-child(12n+10), main .skills .list .item:nth-child(12n+12) {
+        background: #04060b; }
+        main .skills .list .item:nth-child(12n+4):hover, main .skills .list .item:nth-child(12n+5):hover, main .skills .list .item:nth-child(12n+9):hover, main .skills .list .item:nth-child(12n+10):hover, main .skills .list .item:nth-child(12n+12):hover {
+          background: #04060b; }
+      main .skills .list .item:hover {
+        background: #68513d; }
+        main .skills .list .item:hover p,
+        main .skills .list .item:hover .title,
+        main .skills .list .item:hover .icon-language:before {
+          color: #e0e0e0; }
+        main .skills .list .item:hover .icon-illus {
+          border-color: #e0e0e0; }
+      main .skills .list .item .icon-illus {
+        width: 6.5rem;
+        height: 6.5rem;
+        border: 0.2rem solid #68513d;
+        border-radius: 2rem;
+        margin: auto; }
+      main .skills .list .item .icon-language {
+        display: block;
+        font-size: 4rem;
+        padding: 10px;
+        /* use !important to prevent issues with browser extensions that change fonts */
+        font-family: 'icomoon' !important;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale; }
+        main .skills .list .item .icon-language:before {
+          content: "\e901";
+          color: #68513d; }
+      main .skills .list .item p {
+        font-family: "Freight-BigBook";
+        font-size: 9.5rem;
+        line-height: 1.16;
+        color: #e0e0e0;
+        text-transform: uppercase; }
+      main .skills .list .item .title {
+        font-family: "Poppins-SemiBold";
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 2.08;
+        letter-spacing: 1.7px;
+        color: #606060;
+        text-transform: uppercase; }
+  main .works .works-header {
+    width: 90rem;
+    margin: auto; }
+    main .works .works-header .section-heading {
+      text-align: left; }
+    main .works .works-header p {
+      width: 45rem; }
+  main .works .grid-item {
+    width: auto;
+    height: 70rem;
+    margin: 1.5rem; }
+    main .works .grid-item:nth-child(9n+1), main .works .grid-item:nth-child(9n+2) {
+      margin-top: 12.1rem; }
+    main .works .grid-item:nth-child(9n+1), main .works .grid-item:nth-child(9n+2), main .works .grid-item:nth-child(9n+5), main .works .grid-item:nth-child(9n+6), main .works .grid-item:nth-child(9n+7), main .works .grid-item:nth-child(9n+8) {
+      width: 45rem; }
+    main .works .grid-item:nth-child(9n+3), main .works .grid-item:nth-child(9n+4), main .works .grid-item:nth-child(9n+9) {
+      width: 93rem;
+      background: grey; }
+    main .works .grid-item img {
+      display: block;
+      height: 100%;
+      width: 100%;
+      object-fit: cover; }
+    main .works .grid-item .more {
+      padding-top: 54px;
+      font-size: 12px;
+      font-family: "Poppins-SemiBold";
+      text-transform: uppercase;
+      line-height: 2.08;
+      letter-spacing: 1.7px;
+      font-weight: 600; }
+      main .works .grid-item .more a {
+        color: #68513d;
+        font-size: 14px;
+        line-height: 1.79;
+        letter-spacing: 2px; }
 
-main .exp table {
-  padding: 140px 0 170px 0; }
-  main .exp table tr {
-    padding-bottom: 90px;
-    display: block; }
-    main .exp table tr:last-child {
-      padding-bottom: 0; }
-  main .exp table th {
-    width: 125px;
-    line-height: 1.25;
-    letter-spacing: 3px;
-    color: #68513d; }
-  main .exp table td {
-    width: 575px;
-    padding: 0 115px; }
-    main .exp table td.title {
-      font-family: "Freight-BigBook";
-      font-size: 5rem;
-      text-transform: capitalize;
-      line-height: 1.2;
-      color: #e0e0e0; }
-    main .exp table td.content ul {
+footer {
+  width: 120rem;
+  margin: 245px auto 165px; }
+  footer .title.section-heading {
+    text-align: left; }
+  footer .ft-info {
+    display: flex;
+    justify-content: space-between; }
+  footer .ft-web {
+    color: #68513d;
+    text-transform: uppercase;
+    font-family: "Poppins-SemiBold";
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.79;
+    letter-spacing: 0.2rem;
+    margin-top: 8.4rem; }
+    footer .ft-web .ft-web-item a {
+      color: #68513d;
+      padding-bottom: 0.5rem;
+      display: block; }
+  footer .ft-box {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3.8rem;
+    font-family: "Freight-BigBook";
+    font-size: 2.2rem; }
+    footer .ft-box .ft-box-item {
+      margin: 0 3.2rem; }
+      footer .ft-box .ft-box-item p {
+        line-height: 1.36; }
+    footer .ft-box .ft-address .ft-phone {
+      font-family: "Poppins-SemiBold";
+      font-size: 2rem;
+      font-weight: 600;
+      padding-top: 1rem;
+      line-height: 1.25; }
+    footer .ft-box .ft-contact span {
       font-family: "Poppins-SemiBold";
       font-size: 1.2rem;
       font-weight: 600;
-      line-height: 2.08;
-      letter-spacing: 1.7px;
-      color: #68513d;
-      margin-top: 20px;
-      text-decoration: underline; }
-
-main .skills .list {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 60px -2px 0 -2px; }
-  main .skills .list .item {
-    width: calc(25% - 4px);
-    background: #131313;
-    text-align: center;
-    padding: 80px 115px 68px 115px;
-    transition: all 0.2s;
-    margin: 2px; }
-    main .skills .list .item:nth-child(12n+1) {
-      background: #04060b; }
-    main .skills .list .item:nth-child(12n+4), main .skills .list .item:nth-child(12n+5), main .skills .list .item:nth-child(12n+9), main .skills .list .item:nth-child(12n+10), main .skills .list .item:nth-child(12n+12) {
-      background: #04060b; }
-      main .skills .list .item:nth-child(12n+4):hover, main .skills .list .item:nth-child(12n+5):hover, main .skills .list .item:nth-child(12n+9):hover, main .skills .list .item:nth-child(12n+10):hover, main .skills .list .item:nth-child(12n+12):hover {
-        background: #04060b; }
-    main .skills .list .item:hover {
-      background: #68513d; }
-      main .skills .list .item:hover p,
-      main .skills .list .item:hover .title,
-      main .skills .list .item:hover .icon-language:before {
-        color: #e0e0e0; }
-      main .skills .list .item:hover .icon-illus {
-        border-color: #e0e0e0; }
-    main .skills .list .item .icon-illus {
-      width: 6.5rem;
-      height: 6.5rem;
-      border: 0.2rem solid #68513d;
-      border-radius: 2rem;
-      margin: auto; }
-    main .skills .list .item .icon-language {
-      display: block;
-      font-size: 4rem;
-      padding: 10px;
-      /* use !important to prevent issues with browser extensions that change fonts */
-      font-family: 'icomoon' !important;
-      speak: none;
-      font-style: normal;
-      font-weight: normal;
-      font-variant: normal;
-      text-transform: none;
-      line-height: 1;
-      /* Better Font Rendering =========== */
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale; }
-      main .skills .list .item .icon-language:before {
-        content: "\e901";
-        color: #68513d; }
-    main .skills .list .item p {
-      font-family: "Freight-BigBook";
-      font-size: 9.5rem;
-      line-height: 1.16;
-      color: #e0e0e0;
-      text-transform: uppercase; }
-    main .skills .list .item .title {
-      font-family: "Poppins-SemiBold";
-      font-size: 12px;
-      font-weight: 600;
-      line-height: 2.08;
+      line-height: 2.92;
       letter-spacing: 1.7px;
       color: #606060; }
-
-main .works .grid-item {
-  width: auto; }
-  main .works .grid-item img {
-    display: block; }
+    footer .ft-box img {
+      margin-bottom: 2.7rem; }

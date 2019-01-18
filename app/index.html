@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Oke</title>
-  <base href="/">
 
   <!--build:css css/styles.min.css-->
   <link rel="stylesheet" href="css/styles.css">
@@ -23,10 +22,17 @@
     <p class="intro">I’m Chau Giang, 28 years old. I’m a senior designer having an experience of 4
       years
       with web design and 3 years with UX/UI.</p>
+    <div class="scroll bounce">
+      <a class="scroll-down " href="#about" title="Scroll down">
+        <div class="arrow"></div>
+        <div class="arrow is-big"></div>
+
+      </a>
+    </div>
   </header>
 
   <main>
-    <section class="about">
+    <section class="about" id="about">
       <div class="container">
         <div class="about__illus"></div>
 
@@ -63,8 +69,8 @@
             <p>Banner design, slider, poster. Design theme with joomla, worldpress. In charge of photos, events,
               media at nootheme</p>
             <ul>
-              <li>https://nootheme.com/</li>
-              <li>https://themeforest.net/user/nootheme</li>
+              <li><a href="">https://nootheme.com/</a></li>
+              <li><a href="">https://themeforest.net/user/nootheme</a></li>
             </ul>
           </td>
         </tr>
@@ -75,8 +81,8 @@
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
               industry's standard dummy text ever since the 1500s</p>
             <ul>
-              <li>https://beautheme.com/</li>
-              <li>https://themeforest.net/user/beautheme</li>
+              <li><a href="">https://nootheme.com/</a></li>
+              <li><a href="">https://themeforest.net/user/nootheme</a></li>
             </ul>
           </td>
         </tr>
@@ -188,22 +194,25 @@
     </section>
 
     <section class="works">
-      <h2 class="section-heading">Best Works of Mine</h2>
-      <p>Web Design is not only be my job but it also be my hobby and my passion. After many years of learning, working
-        and creativity, I really feel proud when
-        having a source of quality projects.</p>
+      <div class="works-header">
+        <h2 class="section-heading">Best Works of Mine</h2>
+        <p>Web Design is not only be my job but it also be my hobby and my passion. After many years of learning,
+          working
+          and creativity, I really feel proud when
+          having a source of quality projects.</p>
+      </div>
       <ul class="grid">
         <li class="grid-item">
           <img src="images/works/1.png" alt="">
         </li>
         <li class="grid-item">
-          <img src="images/works/2.png" alt="">
+          <img src="images/works/1.png" alt="">
         </li>
         <li class="grid-item">
-          <img src="images/works/3.png" alt="">
+          <img src="images/works/9.png" alt="">
         </li>
         <li class="grid-item">
-          <img src="images/works/4.png" alt="">
+          <img src="images/works/9.png" alt="">
         </li>
         <li class="grid-item">
           <img src="images/works/5.png" alt="">
@@ -219,13 +228,50 @@
         </li>
         <li class="grid-item">
           <img src="images/works/9.png" alt="">
+          <p class="more">And so much more … <a href="">Behance</a></p>
         </li>
       </ul>
     </section>
   </main>
+
+  <footer>
+    <section class='ft-container'>
+      <h2 class="title section-heading">More about me_</h2>
+      <div class="ft-info">
+        <ul class="ft-web">
+          <li class="ft-web-item">
+            <a href="">https://dribbble.com/</a>
+          </li>
+          <li class="ft-web-item">
+            <a href="">https://www.behance.net/chaugiang</a>
+          </li>
+          <li class="ft-web-item">
+            <a href="">https://www.facebook.com/vuchaugiang136</a>
+          </li>
+        </ul>
+        <div class="ft-box">
+          <div class="ft-address ft-box-item">
+            <img src="images/icon/if-icon-location-2867917.png" alt="">
+            <p>Ha Tri, Ha Cau, Ha Dong, Ha Noi</p>
+            <p class="ft-phone">0167 855 0940</p>
+          </div>
+          <div class="ft-contact -ft-box-item">
+            <img src="images/icon/if-location-226573.png" alt="">
+            <p>
+              <span>Email /</span>
+              vuchaugiang136@gmail.com</p>
+            <p>
+              <span>skype /</span>
+              vuchaugiang136
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </footer>
 </body>
 
-<!-- <script src="http://code.jquery.com/jquery-1.9.1.js"></script> -->
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 
 <!--build:js js/lib.min.js -->
 <script src="js/lib/masonry.pkgd.min.js"></script>

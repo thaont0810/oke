@@ -20,6 +20,7 @@ a {
 $font-family: "Cardo";
 $font-heading: "Freight-BigBook";
 $font-small: "Poppins-SemiBold";
+$main-color: #b0b0b0;
 
 @font-face {
   font-family: $font-heading;
@@ -47,24 +48,21 @@ $font-small: "Poppins-SemiBold";
 
 body {
   font-family: $font-family;
-  color: #b0b0b0;
+  color: $main-color;
   font-size: 1.8rem;
   line-height: 30px;
   background-color: #04060b;
 }
 
 .container {
-  width: 1410px;
+  width: 141rem;
   margin: auto;
-
-  // &--small {
-  //   width: 1050px;
-  // }
 }
 
 header {
+
   .navbar {
-    padding: 80px 0 0;
+    padding: 8rem 0 0;
 
     &__brand {
       display: block;
@@ -79,41 +77,114 @@ header {
   }
 
   .intro {
-    width: 1050px;
+    width: 105rem;
     font-family: $font-heading;
     font-size: 9.5rem;
     color: #e0e0e0;
     line-height: 1.16;
-    margin: 315px auto 0;
+    margin: 31.5rem auto 0;
+  }
+
+  .scroll {
+    position: relative;
+
+    .scroll-down {
+      margin-top: 12rem;
+      position: absolute;
+      left: 50%;
+      margin-left: -23px;
+    }
+
+    &.bounce {
+      -moz-animation: bounce 2s infinite;
+      -webkit-animation: bounce 2s infinite;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+
+      0%,
+      20%,
+      50%,
+      80%,
+      100% {
+        transform: translateY(0);
+      }
+
+      40% {
+        transform: translateY(-30px);
+      }
+
+      60% {
+        transform: translateY(-15px);
+      }
+    }
+
+    .arrow {
+      position: relative;
+      width: 45px;
+      height: 45px;
+      transform: rotate(-45deg);
+
+      &.is-big {
+        position: absolute;
+        top: 10px;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-left: 1px solid;
+        height: 44px;
+        border-image:
+          linear-gradient(to bottom, #000000, #5a5a5a) 1 100%;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        border-bottom: 1px solid;
+        width: 44px;
+        border-image:
+          linear-gradient(to left, #000000, #5a5a5a) 100% 1;
+      }
+    }
   }
 }
 
+.section-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-illus {
+  height: 0.1rem;
+  background-image: linear-gradient(to right, #111112, #35373a, #111112);
+}
+
+.section-heading {
+  font-family: $font-heading;
+  font-size: 9.5rem;
+  font-weight: normal;
+  line-height: 1.16;
+  color: #e0e0e0;
+  text-align: center;
+  margin-top: 115px;
+}
+
 main {
-  .section-flex {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .section-illus {
-    height: 1px;
-    background-image: linear-gradient(to right, #111112, #35373a, #111112);
-  }
-
-  .section-heading {
-    font-family: $font-heading;
-    font-size: 9.5rem;
-    line-height: 1.16;
-    color: #e0e0e0;
-    text-align: center;
-    margin-top: 115px;
-  }
+  margin-top: 23.6rem - 7rem;
+  padding-top: 7rem;
 
   .about {
-    margin-top: 235px;
 
     .container {
       .container-abt {
-        padding: 0 240px 110px 240px;
+        padding: 0 24rem 11rem 24rem;
         position: relative;
 
         &:after {
@@ -130,9 +201,9 @@ main {
     }
 
     &__illus {
-      width: 160px;
-      height: 160px;
-      border-radius: 80px;
+      width: 16rem;
+      height: 16rem;
+      border-radius: 8rem;
       background-color: #5a5a5a;
       margin: auto;
     }
@@ -145,20 +216,18 @@ main {
       letter-spacing: 3px;
       color: #68513d;
       text-transform: uppercase;
-      margin: 100px 0 20px;
+      margin: 10rem 0 2rem;
     }
 
     &__para {
       width: 50%;
-      padding: 0 80px 0 0;
+      padding: 0 8rem 0 0;
       position: relative;
-
-
     }
 
     &__block {
       width: 50%;
-      padding: 0 0 0 80px;
+      padding: 0 0 0 8rem;
     }
 
     &__text {
@@ -181,10 +250,10 @@ main {
   .exp {
 
     table {
-      padding: 140px 0 170px 0;
+      padding: 14rem 0 17rem 0;
 
       tr {
-        padding-bottom: 90px;
+        padding-bottom: 9rem;
         display: block;
 
         &:last-child {
@@ -193,15 +262,16 @@ main {
       }
 
       th {
-        width: 125px;
+        width: 12.5rem;
         line-height: 1.25;
         letter-spacing: 3px;
         color: #68513d;
+        font-family: $font-small;
       }
 
       td {
-        width: 575px;
-        padding: 0 115px;
+        width: 57.5rem;
+        padding: 0 11.5rem;
 
         &.title {
           font-family: $font-heading;
@@ -212,14 +282,14 @@ main {
         }
 
         &.content {
-          ul {
+          ul a {
             font-family: $font-small;
             font-size: 1.2rem;
             font-weight: 600;
             line-height: 2.08;
             letter-spacing: 1.7px;
             color: #68513d;
-            margin-top: 20px;
+            margin-top: 2rem;
             text-decoration: underline;
           }
         }
@@ -232,7 +302,7 @@ main {
     .list {
       display: flex;
       flex-wrap: wrap;
-      margin: 60px -2px 0 -2px;
+      margin: 6rem -0.2rem 0 -0.2rem;
 
 
       .item {
@@ -266,6 +336,7 @@ main {
           .title,
           .icon-language:before {
             color: #e0e0e0;
+
           }
 
           .icon-illus {
@@ -320,18 +391,157 @@ main {
           line-height: 2.08;
           letter-spacing: 1.7px;
           color: #606060;
+          text-transform: uppercase;
+
         }
       }
     }
   }
 
   .works {
+
+    .works-header {
+      width: 90rem;
+      margin: auto;
+
+      .section-heading {
+        text-align: left;
+      }
+
+      p {
+        width: 45rem;
+      }
+    }
+
+    .grid {}
+
     .grid-item {
       width: auto;
+      height: 70rem;
+      margin: 1.5rem;
+
+      &:nth-child(9n+1),
+      &:nth-child(9n+2) {
+        margin-top: 13.6rem - 1.5rem;
+      }
+
+      &:nth-child(9n+1),
+      &:nth-child(9n+2),
+      &:nth-child(9n+5),
+      &:nth-child(9n+6),
+      &:nth-child(9n+7),
+      &:nth-child(9n+8) {
+        width: 45rem;
+      }
+
+      &:nth-child(9n+3),
+      &:nth-child(9n+4),
+      &:nth-child(9n+9) {
+        width: 93rem;
+        background: grey;
+
+      }
 
       img {
         display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+
       }
+
+      .more {
+        padding-top: 54px;
+        font-size: 12px;
+        font-family: $font-small;
+        text-transform: uppercase;
+        line-height: 2.08;
+        letter-spacing: 1.7px;
+        font-weight: 600;
+
+        a {
+          color: #68513d;
+          font-size: 14px;
+          line-height: 1.79;
+          letter-spacing: 2px;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  width: 120rem;
+  margin: 245px auto 165px;
+
+  .ft-container {}
+
+  .title {
+    &.section-heading {
+      text-align: left;
+    }
+  }
+
+  .ft-info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .ft-web {
+    color: #68513d;
+    text-transform: uppercase;
+    font-family: $font-small;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.79;
+    letter-spacing: 0.2rem;
+    margin-top: 8.4rem;
+
+    .ft-web-item a {
+      color: #68513d;
+      padding-bottom: 0.5rem;
+      display: block;
+    }
+  }
+
+  .ft-box {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3.8rem;
+    font-family: $font-heading;
+    font-size: 2.2rem;
+
+    .ft-box-item {
+      margin: 0 3.2rem;
+
+      p {
+        line-height: 1.36;
+      }
+    }
+
+    .ft-address {
+      .ft-phone {
+        font-family: $font-small;
+        font-size: 2rem;
+        font-weight: 600;
+        padding-top: 1rem;
+        line-height: 1.25;
+      }
+    }
+
+    .ft-contact {
+      span {
+        font-family: $font-small;
+        font-size: 1.2rem;
+        font-weight: 600;
+        line-height: 2.92;
+        letter-spacing: 1.7px;
+        color: #606060;
+      }
+    }
+
+    img {
+      margin-bottom: 2.7rem;
     }
   }
 }
